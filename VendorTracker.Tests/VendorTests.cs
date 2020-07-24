@@ -6,10 +6,20 @@ using System;
 namespace VendorTracker.Tests
 {
   [TestClass]
-  public class ClassNameTests
+  public class VendorTests : IDisposable
   {
+    public void Dispose()
+    {
+      Vendor.ClearAll();
+    }
 
-    // Test methods will go here.
+    [TestMethod]
+    public void VendorConstructor_InstantiatesInstanceOfVendor_True()
+    {
+      Vendor testVendor = new Vendor("test");
+      Assert.AreEqual(typeof(Vendor), testVendor.GetType());
+    }
+    
 
   }
 }
