@@ -34,7 +34,7 @@ namespace VendorTracker.Controllers
       return View(foundItem);
     }
 
-    [HttpGet("/categories/{categoryId}/items/{itemId}")]
+    [HttpGet("/vendors/{vendorID}/items/{itemId}")]
       public ActionResult Show(int vendorId, int itemId)
       {
         Item item = Item.Find(itemId);

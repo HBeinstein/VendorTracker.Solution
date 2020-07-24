@@ -27,7 +27,7 @@ namespace VendorTracker.Controllers
       return RedirectToAction("Index");
     }
 
-  [HttpPost("/vendors/{categoryId}/items")]
+  [HttpPost("/vendors/{vendorID}/items")]
     public ActionResult Create(int vendorId, string itemDescription)
     {
       Dictionary<string, object> model = new Dictionary<string, object>();
