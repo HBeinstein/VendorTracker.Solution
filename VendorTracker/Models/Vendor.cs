@@ -1,6 +1,6 @@
-namespace ProjectName.Models
+namespace VendorTracker.Models
 {
-  public class ClassName
+  public class Vendor
   {
 
     // properties, methods, etc. will go here.

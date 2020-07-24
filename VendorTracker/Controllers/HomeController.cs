@@ -1,10 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
-using ProjectName.Models;
+using VendorTracker.Models;
 using System.Collections.Generic;
 
 using Microsoft.AspNetCore.Mvc;
 
-namespace ProjectName.Controllers
+namespace VendorTracker.Controllers
 {
   public class HomeController : Controller
   {
