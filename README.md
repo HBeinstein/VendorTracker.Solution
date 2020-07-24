@@ -28,9 +28,9 @@ _This is a program to track vendors and their weekly orders from a bakery. The p
 
 | Spec | Input | Output |
 | :-------------      | :------------- | :------------- |
-| ** 1. Program will take in inputted word | "apple" | -- |
-| ** 2. Program will return true if word is a palindrome| "hannah" | true |
-| ** 3. Program will return false if word is not a palindrome | "word" | false |
+| ** 1. Program will instantiate new Vendor object | "add vendor" | -- |
+| ** 2. Program will instantiate new Items object | "add items" | -- |
+| ** 3. Program will add Items to Vendor object | "1 bread, 1 pastry" | Grocery: "1 bread, 1 pastry" |
 
 ## Setup/Installation Requirements
 
