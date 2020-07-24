@@ -65,7 +65,7 @@ namespace VendorTracker.Tests
       Item testItem1 = new Item(description1);
       Item testItem2 = new Item(description2);
 
-      Item result = Item.Find(1);
+      Item result = Item.Find(2);
 
       Assert.AreEqual(testItem2, result);
     }
