@@ -65,15 +65,8 @@ namespace VendorTracker.Tests
       string name = "Work";
       Vendor testVendor = new Vendor(name);
       testVendor.AddItem(testItem);
-
-      string description2 = "cat";
-      Item testItem2 = new Item(description2);
-      List<Item> testList2 = new List<Item> { testItem2 };
-      string name2 = "Pet Store";
-      Vendor testVendor2 = new Vendor(name2);
-      testVendor2.AddItem(testItem2);
       
-      List<Item> result = testVendor2.Items;
+      List<Item> result = testVendor.Items;
       
       CollectionAssert.AreEqual(testList, result);
     }
