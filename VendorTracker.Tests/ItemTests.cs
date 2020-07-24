@@ -49,5 +49,13 @@ namespace VendorTracker.Tests
       CollectionAssert.AreEqual(newList, result);
     }
 
+    [TestMethod]
+    public void GetAll_ReturnsEmptyItemsList_True()
+    {
+      List<Item> newList = new List<Item> {};
+      List<Item> result = Item.GetAll();
+      CollectionAssert.AreEqual(newList, result);
+    }
+
   }
 }
