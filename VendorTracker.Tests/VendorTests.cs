@@ -29,8 +29,18 @@ namespace VendorTracker.Tests
       Assert.AreEqual(testVendorID, testVendor.ID);
     }
 
+    [TestMethod]
+    public void GetAll_ReturnsAllVendorObjects_True()
+    {
+      string name1 = "Steve";
+      string name2 = "Jim";
+      Vendor testVendor1 = new Vendor(name1);
+      Vendor testVendor2 = new Vendor(name2);
+      List<Vendor> testList = new List<Vendor> { testVendor1, testVendor2 };
 
-    
+      List<Vendor> result = Vendor.GetAll();
 
+      CollectionAssert.AreEqual(testList, result);
+    }
   }
 }
