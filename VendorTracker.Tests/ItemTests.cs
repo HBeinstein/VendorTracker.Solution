@@ -36,7 +36,7 @@ namespace VendorTracker.Tests
       Item testItem = new Item(testDescription);
       string testDescription2 = "cat";
       testItem.Description = testDescription2;
-      Assert.AreEqual("dog", testItem.Description);
+      Assert.AreEqual("cat", testItem.Description);
     }
 
   }
