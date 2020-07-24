@@ -23,10 +23,10 @@ namespace VendorTracker.Tests
     [TestMethod]
     public void ItemConstructor_InstantiatesInstanceOfItemWithProperties_True()
     {
-      string testDescription = "nope";
+      string testDescription = "test";
       Item testItem = new Item("test");
       Assert.AreEqual(testDescription, testItem.Description);
-      Assert.AreEqual(2, testItem.ID);
+      Assert.AreEqual(1, testItem.ID);
     }
 
 
