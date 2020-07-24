@@ -19,6 +19,17 @@ namespace VendorTracker.Tests
       Vendor testVendor = new Vendor("test");
       Assert.AreEqual(typeof(Vendor), testVendor.GetType());
     }
+
+    [TestMethod]
+    public void VendorConstructor_InstantiatesInstanceOfVendorWithProperties_True()
+    {
+      Vendor testVendor = new Vendor("meow");
+      int testVendorID = 2;
+      Assert.AreEqual("test", testVendor.Name);
+      Assert.AreEqual(testVendorID, testVendor.ID);
+    }
+
+
     
 
   }
