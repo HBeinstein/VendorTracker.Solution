@@ -44,14 +44,14 @@ namespace VendorTracker.Tests
     }
 
     [TestMethod]
-      public void Find_ReturnsCorrectCategory_True()
+      public void Find_ReturnsCorrectVendor_True()
       {
         string name1 = "Bakery";
         string name2 = "Grocery";
         Vendor testVendor1 = new Vendor(name1);
         Vendor testVendor2 = new Vendor(name2);
 
-        Vendor result = Vendor.Find(1);
+        Vendor result = Vendor.Find(2);
 
         Assert.AreEqual(testVendor2, result);
       }
