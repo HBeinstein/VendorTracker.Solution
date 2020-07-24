@@ -26,5 +26,10 @@ namespace VendorTracker.Models
       _itemsList.Clear();
     }
 
+    public static List<Item> GetAll()
+    {
+      return _itemsList;
+    }
+
   }
 }
