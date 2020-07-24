@@ -21,7 +21,7 @@ namespace VendorTracker.Tests
     }
 
     [TestMethod]
-    public void ItemConstructor_InstantiatesInstanceOfItemWithProperties_True()
+    public void ItemConstructor_GetDescriptionandID_True()
     {
       string testDescription = "test";
       Item testItem = new Item("test");
@@ -29,7 +29,15 @@ namespace VendorTracker.Tests
       Assert.AreEqual(1, testItem.ID);
     }
 
-
+    [TestMethod]
+    public void ItemConstructor_SetDescription_True()
+    {
+      string testDescription = "test";
+      Item testItem = new Item(testDescription);
+      string testDescription2 = "cat";
+      testItem.Description = testDescription2;
+      Assert.AreEqual("dog", testItem.Description);
+    }
 
   }
 }
