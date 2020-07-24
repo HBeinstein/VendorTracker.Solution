@@ -31,5 +31,10 @@ namespace VendorTracker.Models
       return _itemsList;
     }
 
+    public static Item Find(int searchID)
+    {
+      return _itemsList[searchID - 1];
+    }
+
   }
 }

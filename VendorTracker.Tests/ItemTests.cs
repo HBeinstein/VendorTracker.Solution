@@ -57,5 +57,18 @@ namespace VendorTracker.Tests
       CollectionAssert.AreEqual(newList, result);
     }
 
+    [TestMethod]
+    public void Find_ReturnsCorrectItem_Item()
+    {
+      string description1 = "Walk the dog";
+      string description2 = "Walk the cat";
+      Item testItem1 = new Item(description1);
+      Item testItem2 = new Item(description2);
+
+      Item result = Item.Find(1);
+
+      Assert.AreEqual(testItem2, result);
+    }
+
   }
 }
