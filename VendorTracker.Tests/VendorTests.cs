@@ -42,5 +42,18 @@ namespace VendorTracker.Tests
 
       CollectionAssert.AreEqual(testList, result);
     }
+
+    [TestMethod]
+      public void Find_ReturnsCorrectCategory_True()
+      {
+        string name1 = "Bakery";
+        string name2 = "Grocery";
+        Vendor testVendor1 = new Vendor(name1);
+        Vendor testVendor2 = new Vendor(name2);
+
+        Vendor result = Vendor.Find(1);
+
+        Assert.AreEqual(testVendor2, result);
+      }
   }
 }
