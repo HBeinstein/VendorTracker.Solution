@@ -15,9 +15,9 @@ namespace VendorTracker.Models
     // constructor
     public Item(string description) 
     {
-      // Description = description;
-      // _itemsList.Add(this);
-      // ID = _itemsList.Count;
+      Description = description;
+      _itemsList.Add(this);
+      ID = _itemsList.Count;
     }
 
     // methods

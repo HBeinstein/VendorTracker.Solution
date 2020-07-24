@@ -20,6 +20,15 @@ namespace VendorTracker.Tests
       Assert.AreEqual(typeof(Item), testItem.GetType());
     }
 
+    [TestMethod]
+    public void ItemConstructor_InstantiatesInstanceOfItemWithProperties_True()
+    {
+      string testDescription = "nope";
+      Item testItem = new Item("test");
+      Assert.AreEqual(testDescription, testItem.Description);
+      Assert.AreEqual(2, testItem.ID);
+    }
+
 
 
   }
