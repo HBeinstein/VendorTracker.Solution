@@ -22,15 +22,15 @@ Use Razor to display information on each page.
 
 ## Description
 
-_This is a program to track vendors and their weekly orders from a bakery. The program will hold a list of vendors, as well as a list of each vendor's order. The program will allow the user to select a vendor, and when prompted, will display all the bakery items that that specific vendor has ordered for the week._
+_This is a program to track vendors and their weekly orders from a bakery. The program will hold a list of vendors, as well as a list of each vendor's order. The program will allow the user to select a vendor, and when prompted, will display all the bakery orders that that specific vendor has ordered for the week._
 
 ## Specs
 
 | Spec | Input | Output |
 | :-------------      | :------------- | :------------- |
 | ** 1. Program will instantiate new Vendor object | "add vendor" | -- |
-| ** 2. Program will instantiate new Items object | "add items" | -- |
-| ** 3. Program will add Items to Vendor object | "1 bread, 1 pastry" | Grocery: "1 bread, 1 pastry" |
+| ** 2. Program will instantiate new Orders object | "add orders" | -- |
+| ** 3. Program will add Orders to Vendor object | "1 bread, 1 pastry" | Grocery: "1 bread, 1 pastry" |
 
 ## Setup/Installation Requirements
 

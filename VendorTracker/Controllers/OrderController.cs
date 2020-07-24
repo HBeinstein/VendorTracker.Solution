@@ -4,43 +4,43 @@ using System.Collections.Generic;
 
 namespace VendorTracker.Controllers
 {
-  public class ItemsController : Controller
+  public class OrdersController : Controller
   {
-    [HttpGet("/vendors/{vendorId}/items/new")]
+    [HttpGet("/vendors/{vendorId}/orders/new")]
     public ActionResult New(int vendorId)
     {
       Vendor vendor = Vendor.Find(vendorId);
       return View(vendor);
     }
 
-    [HttpPost("/items")]
+    [HttpPost("/orders")]
     public ActionResult Create(string description)
     {
-      Item myItem = new Item(description);
+      Order myOrder = new Order(description);
       return RedirectToAction("Index");
     }
 
-    [HttpPost("/items/delete")]
+    [HttpPost("/orders/delete")]
     public ActionResult DeleteAll()
     {
-      Item.ClearAll();
+      Order.ClearAll();
       return View();
     }
 
-    [HttpGet("/items/{id}")]
+    [HttpGet("/orders/{id}")]
     public ActionResult Show(int id)
     {
-      Item foundItem = Item.Find(id);
-      return View(foundItem);
+      Order foundOrder = Order.Find(id);
+      return View(foundOrder);
     }
 
-    [HttpGet("/vendors/{vendorID}/items/{itemId}")]
-      public ActionResult Show(int vendorId, int itemId)
+    [HttpGet("/vendors/{vendorID}/orders/{orderId}")]
+      public ActionResult Show(int vendorId, int orderId)
       {
-        Item item = Item.Find(itemId);
+        Order order = Order.Find(orderId);
         Vendor vendor = Vendor.Find(vendorId);
         Dictionary<string, object> model = new Dictionary<string, object>();
-        model.Add("item", item);
+        model.Add("order", order);
         model.Add("vendor", vendor);
         return View(model);
       }

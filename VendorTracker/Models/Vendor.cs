@@ -5,39 +5,39 @@ namespace VendorTracker.Models
   public class Vendor
   {
     // properties
-    private static List<Vendor> _itemsList = new List<Vendor> {};
+    private static List<Vendor> _ordersList = new List<Vendor> {};
     public string Name { get; set; }
     public int ID { get; }
-    public List<Item> Items { get; set; }
+    public List<Order> Orders { get; set; }
 
     // constructor
     public Vendor (string name)
     {
       Name = name;
-      _itemsList.Add(this);
-      ID = _itemsList.Count;
-      Items = new List<Item>{};
+      _ordersList.Add(this);
+      ID = _ordersList.Count;
+      Orders = new List<Order>{};
     }
 
     // methods
     public static void ClearAll()
     {
-      _itemsList.Clear();
+      _ordersList.Clear();
     }
 
     public static List<Vendor> GetAll()
     {
-      return _itemsList;
+      return _ordersList;
     }
 
     public static Vendor Find(int searchId)
     {
-      return _itemsList[searchId-1];
+      return _ordersList[searchId-1];
     }
 
-    public void AddItem(Item item)
+    public void AddOrder(Order order)
     {
-      Items.Add(item);
+      Orders.Add(order);
     }
   }
 }

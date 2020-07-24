@@ -57,16 +57,16 @@ namespace VendorTracker.Tests
     }
 
     [TestMethod]
-    public void AddItem_AssociatesItemWithVendor_True()
+    public void AddOrder_AssociatesOrderWithVendor_True()
     {
       string description = "bread";
-      Item testItem = new Item(description);
-      List<Item> testList = new List<Item> { testItem };
+      Order testOrder = new Order(description);
+      List<Order> testList = new List<Order> { testOrder };
       string name = "Work";
       Vendor testVendor = new Vendor(name);
-      testVendor.AddItem(testItem);
+      testVendor.AddOrder(testOrder);
       
-      List<Item> result = testVendor.Items;
+      List<Order> result = testVendor.Orders;
       
       CollectionAssert.AreEqual(testList, result);
     }
