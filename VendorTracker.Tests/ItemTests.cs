@@ -44,10 +44,9 @@ namespace VendorTracker.Tests
     {
       Item cat = new Item("walk the cat");
       Item dog = new Item("walk the dog");
-      List<Item> listToCompare = new List<Item> {dog};
       List<Item> newList = new List<Item> {cat, dog};
       List<Item> result = Item.GetAll();
-      CollectionAssert.AreEqual(listToCompare, result);
+      CollectionAssert.AreEqual(newList, result);
     }
 
   }
