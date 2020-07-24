@@ -23,8 +23,8 @@ namespace VendorTracker.Tests
     [TestMethod]
     public void VendorConstructor_InstantiatesInstanceOfVendorWithProperties_True()
     {
-      Vendor testVendor = new Vendor("meow");
-      int testVendorID = 2;
+      Vendor testVendor = new Vendor("test");
+      int testVendorID = 1;
       Assert.AreEqual("test", testVendor.Name);
       Assert.AreEqual(testVendorID, testVendor.ID);
     }
