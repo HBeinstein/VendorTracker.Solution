@@ -59,6 +59,15 @@ namespace VendorTracker.Tests
     }
 
     [TestMethod]
+    public void OrderConstructor_SetComments_True()
+    {
+      string testComment = "comment";
+      Order testOrder = new Order("test", "test", "test", testComment);
+      string testComment2 = "comments";
+      Assert.AreEqual(testComment2, testOrder.Comments);
+    }
+
+    [TestMethod]
     public void GetAll_ReturnsOrdersList_True()
     {
       Order cat = new Order("walk the cat", "test", "test2", "test3");
