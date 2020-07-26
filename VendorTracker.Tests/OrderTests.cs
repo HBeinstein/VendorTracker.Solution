@@ -63,7 +63,7 @@ namespace VendorTracker.Tests
     {
       string testComment = "comment";
       Order testOrder = new Order("test", "test", "test", testComment);
-      string testComment2 = "comments";
+      string testComment2 = "comment";
       Assert.AreEqual(testComment2, testOrder.Comments);
     }
 
