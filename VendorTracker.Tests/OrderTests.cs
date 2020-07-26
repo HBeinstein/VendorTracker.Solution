@@ -36,19 +36,17 @@ namespace VendorTracker.Tests
     {
       string testDescription = "test";
       Order testOrder = new Order(testDescription, "october", "$10", "none");
-      string testDescription2 = "cat";
-      testOrder.Description = testDescription2;
-      Assert.AreEqual("cat", testOrder.Description);
+      string testDescription2 = "test";
+      Assert.AreEqual(testDescription2, testOrder.Description);
     }
 
     [TestMethod]
     public void OrderConstructor_SetPrice_True()
     {
       string testPrice = "$20";
-      Order testOrder = new Order("test", testPrice, "$10", "none");
-      string testPrice2 = "$0";
-      testOrder.Price = testPrice2;
-      Assert.AreEqual("12", testOrder.Price);
+      Order testOrder = new Order("test", "test", testPrice, "none");
+      string testPrice2 = "$20";
+      Assert.AreEqual(testPrice2, testOrder.Price);
     }
 
     [TestMethod]
