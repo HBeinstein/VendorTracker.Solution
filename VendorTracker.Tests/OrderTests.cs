@@ -42,6 +42,16 @@ namespace VendorTracker.Tests
     }
 
     [TestMethod]
+    public void OrderConstructor_SetPrice_True()
+    {
+      string testPrice = "$20";
+      Order testOrder = new Order("test", testPrice, "$10", "none");
+      string testPrice2 = "$0";
+      testOrder.Price = testPrice2;
+      Assert.AreEqual("12", testOrder.Price);
+    }
+
+    [TestMethod]
     public void GetAll_ReturnsOrdersList_True()
     {
       Order cat = new Order("walk the cat", "test", "test2", "test3");
