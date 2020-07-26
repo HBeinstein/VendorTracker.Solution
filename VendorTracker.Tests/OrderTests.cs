@@ -21,7 +21,7 @@ namespace VendorTracker.Tests
     }
 
     [TestMethod]
-    public void OrderConstructor_GetDescriptionandID_True()
+    public void OrderConstructor_GetPropertiesandID_True()
     {
       Order testOrder = new Order("test", "october", "$10", "none");
       Assert.AreEqual("test", testOrder.Description);
