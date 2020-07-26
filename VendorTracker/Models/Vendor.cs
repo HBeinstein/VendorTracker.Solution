@@ -8,16 +8,16 @@ namespace VendorTracker.Models
     private static List<Vendor> _ordersList = new List<Vendor> {};
     public string Name { get; set; }
     public string Description { get; set; }
-    public string Location { get; set; }
+    public string Place { get; set; }
     public int ID { get; }
     public List<Order> Orders { get; set; }
 
     // constructor
-    public Vendor (string name, string description, string location)
+    public Vendor (string name, string description, string place)
     {
       Name = name;
       Description = description;
-      Location = location;
+      Place = place;
       _ordersList.Add(this);
       ID = _ordersList.Count;
       Orders = new List<Order>{};

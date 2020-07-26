@@ -14,9 +14,9 @@ namespace VendorTracker.Controllers
     }
 
     [HttpPost("/orders")]
-    public ActionResult Create(string description)
+    public ActionResult Create(string orderDescription, string orderDeliveryDate, string orderTotalPrice, string orderComments)
     {
-      Order myOrder = new Order(description);
+      Order myOrder = new Order(orderDescription, orderDeliveryDate, orderTotalPrice, orderComments);
       return RedirectToAction("Index");
     }
 

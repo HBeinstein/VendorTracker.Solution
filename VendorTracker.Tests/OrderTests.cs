@@ -16,16 +16,18 @@ namespace VendorTracker.Tests
     [TestMethod]
     public void OrderConstructor_InstantiatesInstanceOfOrder_True()
     {
-      Order testOrder = new Order("test");
+      Order testOrder = new Order("test", "october", "$10", "none");
       Assert.AreEqual(typeof(Order), testOrder.GetType());
     }
 
     [TestMethod]
     public void OrderConstructor_GetDescriptionandID_True()
     {
-      string testDescription = "test";
-      Order testOrder = new Order("test");
-      Assert.AreEqual(testDescription, testOrder.Description);
+      Order testOrder = new Order("test", "october", "$10", "none");
+      Assert.AreEqual("test", testOrder.Description);
+      Assert.AreEqual("october", testOrder.Date);
+      Assert.AreEqual("$10", testOrder.Price);
+      Assert.AreEqual("none", testOrder.Comments);
       Assert.AreEqual(1, testOrder.ID);
     }
 
@@ -33,7 +35,7 @@ namespace VendorTracker.Tests
     public void OrderConstructor_SetDescription_True()
     {
       string testDescription = "test";
-      Order testOrder = new Order(testDescription);
+      Order testOrder = new Order(testDescription, "october", "$10", "none");
       string testDescription2 = "cat";
       testOrder.Description = testDescription2;
       Assert.AreEqual("cat", testOrder.Description);
@@ -42,8 +44,8 @@ namespace VendorTracker.Tests
     [TestMethod]
     public void GetAll_ReturnsOrdersList_True()
     {
-      Order cat = new Order("walk the cat");
-      Order dog = new Order("walk the dog");
+      Order cat = new Order("walk the cat", "test", "test2", "test3");
+      Order dog = new Order("walk the dog", "test4", "test5", "test6");
       List<Order> newList = new List<Order> {cat, dog};
       List<Order> result = Order.GetAll();
       CollectionAssert.AreEqual(newList, result);
@@ -62,8 +64,8 @@ namespace VendorTracker.Tests
     {
       string description1 = "Walk the dog";
       string description2 = "Walk the cat";
-      Order testOrder1 = new Order(description1);
-      Order testOrder2 = new Order(description2);
+      Order testOrder1 = new Order(description1, "test", "test2", "test3");
+      Order testOrder2 = new Order(description2, "test3", "test4", "test5");
 
       Order result = Order.Find(2);
 
