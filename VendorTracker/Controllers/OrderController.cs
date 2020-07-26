@@ -20,13 +20,6 @@ namespace VendorTracker.Controllers
       return RedirectToAction("Index");
     }
 
-    [HttpPost("/orders/delete")]
-    public ActionResult DeleteAll()
-    {
-      Order.ClearAll();
-      return View();
-    }
-
     [HttpGet("/orders/{id}")]
     public ActionResult Show(int id)
     {
