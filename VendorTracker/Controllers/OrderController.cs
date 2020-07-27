@@ -6,18 +6,12 @@ namespace VendorTracker.Controllers
 {
   public class OrdersController : Controller
   {
+
     [HttpGet("/vendors/{vendorId}/orders/new")]
     public ActionResult New(int vendorId)
     {
       Vendor vendor = Vendor.Find(vendorId);
       return View(vendor);
-    }
-
-    [HttpPost("/orders")]
-    public ActionResult Create(string orderDescription, string orderDeliveryDate, string orderTotalPrice, string orderComments)
-    {
-      Order myOrder = new Order(orderDescription, orderDeliveryDate, orderTotalPrice, orderComments);
-      return RedirectToAction("Index");
     }
 
     [HttpGet("/orders/{id}")]

@@ -1,8 +1,13 @@
+@using VendorTracker.Models;
+
 <h1>Order Details: </h1>
 
+<h2>@Model["order"].Title</h2>
+<h2>Ordered by: @Model["vendor"].Name</h3>
+<h2>@Model["order"].Date</h2>
 <h2>Items in order: @Model["order"].Description</h2>
 <h2>@Model["order"].Price</h2>
-<h3>Ordered by: @Model["vendor"].Name</h3>
+<h2>Comments: @Model["order"].Comments</h3>
 
 <a href='/vendors/@Model["vendor"].ID/orders/new'>Add another order</a>
-<a href='/vendors'>View all categories</a>
+<p><a href='/'>Go Home</a></p>

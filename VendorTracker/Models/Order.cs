@@ -6,6 +6,7 @@ namespace VendorTracker.Models
   {
 
     // properties
+    public string Title { get; set; }
     public string Description { get; set; }
     public string Date { get; set; }
     public string Price { get; set; }
@@ -15,8 +16,9 @@ namespace VendorTracker.Models
     private static List<Order> _ordersList = new List<Order> {};
 
     // constructor
-    public Order(string description, string date, string price, string comments) 
+    public Order(string title, string description, string date, string price, string comments) 
     {
+      Title = title;
       Description = description;
       Date = date;
       Price = price;
