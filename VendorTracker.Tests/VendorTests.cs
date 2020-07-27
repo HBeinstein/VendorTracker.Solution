@@ -60,10 +60,9 @@ namespace VendorTracker.Tests
     public void AddOrder_AssociatesOrderWithVendor_True()
     {
       string description = "bread";
-      Order testOrder = new Order(description, "test", "test2", "test3");
+      Order testOrder = new Order("title", description, "date", "price", "comment");
       List<Order> testList = new List<Order> { testOrder };
-      string name = "Work";
-      Vendor testVendor = new Vendor(name, "test4", "test5");
+      Vendor testVendor = new Vendor("work", "description", "location");
       testVendor.AddOrder(testOrder);
       
       List<Order> result = testVendor.Orders;
